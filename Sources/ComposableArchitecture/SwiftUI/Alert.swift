@@ -165,7 +165,7 @@ public struct AlertState<Action> {
   }
 
   public struct ButtonAction {
-    let type: ActionType
+    public let type: ActionType
 
     public static func send(_ action: Action) -> Self {
       .init(type: .send(action))
