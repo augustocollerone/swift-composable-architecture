@@ -313,7 +313,7 @@ extension AlertState.Button: Equatable where Action: Equatable {}
 
 extension AlertState.ButtonAction: Hashable where Action: Hashable {}
 extension AlertState.ButtonAction.ActionType: Hashable where Action: Hashable {
-  func hash(into hasher: inout Hasher) {
+  public func hash(into hasher: inout Hasher) {
     switch self {
     case let .send(action), let .animatedSend(action, animation: _):
       hasher.combine(action)
