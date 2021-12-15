@@ -175,7 +175,7 @@ public struct AlertState<Action> {
       .init(type: .animatedSend(action, animation: animation))
     }
 
-    enum ActionType {
+    public enum ActionType {
       case send(Action)
       case animatedSend(Action, animation: Animation?)
     }
